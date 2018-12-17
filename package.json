@@ -1,0 +1,93 @@
+{
+  "name": "@stoplight/storybook-config",
+  "version": "0.0.0",
+  "description": "Shared storybook config for UI-Kit based project",
+  "keywords": [],
+  "sideEffects": false,
+  "homepage": "https://github.com/stoplightio/storybook-config",
+  "bugs": "https://github.com/stoplightio/storybook-config/issues",
+  "author": "Stoplight <support@stoplight.io>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stoplightio/storybook-config"
+  },
+  "license": "Apache-2.0",
+  "main": "src/index.ts",
+  "files": [
+    "**/*"
+  ],
+  "engines": {
+    "node": ">=8.3.0"
+  },
+  "scripts": {
+    "build": "sl-scripts build",
+    "build.docs": "build-storybook -c .storybook -o docs-auto",
+    "commit": "git-cz",
+    "lint": "sl-scripts lint",
+    "lint.fix": "yarn lint --fix",
+    "release": "sl-scripts release",
+    "release.docs": "sl-scripts release:docs",
+    "release.dryRun": "sl-scripts release --dry-run --debug",
+    "storybook": "start-storybook -p 9001",
+    "test": "sl-scripts test",
+    "test.prod": "yarn lint && yarn test --coverage --maxWorkers=2",
+    "test.update": "yarn test --updateSnapshot",
+    "test.watch": "yarn test --watch"
+  },
+  "peerDependencies": {
+    "@stoplight/ui-kit": "^1.23.1",
+    "react": ">=16"
+  },
+  "dependencies": {
+    "@storybook/addon-actions": "4.0.12",
+    "@storybook/addon-info": "4.0.12",
+    "@storybook/addon-knobs": "4.0.12",
+    "@storybook/addon-links": "4.0.12",
+    "@storybook/addon-options": "4.0.12",
+    "@storybook/addons": "^4.1.2",
+    "@storybook/core": "4.0.12",
+    "@storybook/react": "4.0.12",
+    "react-docgen-typescript-loader": "^3.0.0",
+    "ts-loader": "^5.3.1"
+  },
+  "devDependencies": {
+    "@stoplight/scripts": "3.x.x",
+    "@stoplight/ui-kit": "^1.23.1",
+    "@types/react": "16.x.x",
+    "@types/react-dom": "16.x.x",
+    "@types/storybook__addon-actions": "3.4.1",
+    "@types/storybook__addon-info": "3.4.2",
+    "@types/storybook__addon-knobs": "^3.4.1",
+    "@types/storybook__addon-links": "3.3.3",
+    "@types/storybook__addon-options": "4.0.0",
+    "@types/storybook__react": "4.0.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "typescript": "3.2.2"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}$": [
+      "yarn lint.fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release": {
+    "extends": "@stoplight/scripts/release"
+  }
+}
