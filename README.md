@@ -2,7 +2,7 @@
 
 <!-- BADGES -->
 
-Shared storybook config for UI-Kit based project
+A shared storybook config for [UI-Kit](https://github.com/stoplightio/ui-kit) based projects.
 
 - Explore the components: [Storybook](https://stoplightio.github.io/storybook-config)
 - View the changelog: [Releases](https://github.com/stoplightio/storybook-config/releases)
