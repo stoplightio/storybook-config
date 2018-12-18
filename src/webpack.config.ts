@@ -1,11 +1,17 @@
 const path = require('path');
 const webpack = require('webpack');
 
+const cwd = process.cwd();
+
 const pkg = require.resolve('package.json', {
   paths: [process.cwd()],
-}) as Partial<{ name: string; url: string }>;
+}) as any;
 
 module.exports = (baseConfig: any, env: any, config: any) => {
+  config.context = cwd;
+  config.resolve.alias['@project/theme'] = require.resolve('.storybook/theme', { paths: [cwd] });
+  // config.resolve.alias['@project/stories'] = require.resolve('.storybook/stories', { paths: [cwd] });
+
   config.plugins.push(
     new webpack.DefinePlugin({
       'pkg.name': JSON.stringify(pkg.name),

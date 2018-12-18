@@ -1,4 +1,4 @@
-# storybook-config
+# @stoplight/storybook-config
 
 <!-- BADGES -->
 

@@ -28,41 +28,37 @@
     "release": "sl-scripts release",
     "release.docs": "sl-scripts release:docs",
     "release.dryRun": "sl-scripts release --dry-run --debug",
-    "storybook": "start-storybook -p 9001",
+    "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "sl-scripts test",
     "test.prod": "yarn lint && yarn test --coverage --maxWorkers=2",
     "test.update": "yarn test --updateSnapshot",
     "test.watch": "yarn test --watch"
   },
   "peerDependencies": {
-    "@stoplight/ui-kit": "^1.23.1",
-    "react": ">=16"
+    "@storybook/react": "^4.1.2",
+    "react": ">=16",
+    "react-dom": ">=16"
   },
   "dependencies": {
-    "@storybook/addon-actions": "4.0.12",
-    "@storybook/addon-info": "4.0.12",
-    "@storybook/addon-knobs": "4.0.12",
-    "@storybook/addon-links": "4.0.12",
-    "@storybook/addon-options": "4.0.12",
+    "@storybook/addon-actions": "^4.1.2",
+    "@storybook/addon-info": "^4.1.2",
+    "@storybook/addon-knobs": "^4.1.2",
+    "@storybook/addon-links": "^4.1.2",
+    "@storybook/addon-options": "^4.1.2",
     "@storybook/addons": "^4.1.2",
-    "@storybook/core": "4.0.12",
-    "@storybook/react": "4.0.12",
+    "@storybook/core": "^4.1.2",
+    "@storybook/react": "^4.1.2",
     "react-docgen-typescript-loader": "^3.0.0",
     "ts-loader": "^5.3.1"
   },
   "devDependencies": {
     "@stoplight/scripts": "3.x.x",
-    "@stoplight/ui-kit": "^1.23.1",
-    "@types/react": "16.x.x",
-    "@types/react-dom": "16.x.x",
     "@types/storybook__addon-actions": "3.4.1",
     "@types/storybook__addon-info": "3.4.2",
     "@types/storybook__addon-knobs": "^3.4.1",
     "@types/storybook__addon-links": "3.3.3",
     "@types/storybook__addon-options": "4.0.0",
     "@types/storybook__react": "4.0.0",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
     "typescript": "3.2.2"
   },
   "lint-staged": {

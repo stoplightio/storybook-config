@@ -1,9 +1,10 @@
 import * as React from 'react';
 
+const { themes } = require('@project/theme');
+
 interface IPanelProps {
   channel: any;
   active: boolean;
-  themes: string[];
 }
 
 interface IPanelState {
@@ -28,11 +29,11 @@ export class Panel extends React.Component<IPanelProps, IPanelState> {
 
   public render() {
     const { themeName } = this.state;
-    const { active, channel, themes } = this.props;
+    const { active, channel } = this.props;
 
     return active ? (
       <div style={{ margin: 25, width: '100%', overflow: 'auto' }}>
-        {themes.map(theme => (
+        {themes.map((theme: string) => (
           <span
             key={theme}
             onClick={() => channel.emit('themes/setTheme', theme)}

@@ -1,27 +1,26 @@
-import { ThemeProvider, ThemeZones } from '@stoplight/ui-kit';
 // @ts-ignore
 import addons, { makeDecorator } from '@storybook/addons';
 import * as React from 'react';
 
+const { ThemeProvider, zones } = require('@project/theme');
+
 interface IThemeContainerProps {
   channel: any;
-  themes: string[];
-  zones: ThemeZones<string>;
+  children: React.ReactNode;
 }
 
 interface IThemeContainerState {
   themeName: string;
 }
 
-export const withThemes = (themes: string[], zones: ThemeZones<string>) =>
-  makeDecorator({
-    name: 'withThemes',
-    wrapper: (story: (context: any) => React.ReactNode, context: any) => (
-      <ThemeContainer channel={addons.getChannel()} themes={themes} zones={zones}>
-        {story(context)}
-      </ThemeContainer>
-    ),
-  });
+export const withThemes = makeDecorator({
+  name: 'withThemes',
+  wrapper: (story: (context: any) => React.ReactNode, context: any) => (
+    <ThemeContainer channel={addons.getChannel()}>
+      {story(context)}
+    </ThemeContainer>
+  ),
+});
 
 class ThemeContainer extends React.Component<IThemeContainerProps, IThemeContainerState> {
   public state = {
@@ -44,7 +43,7 @@ class ThemeContainer extends React.Component<IThemeContainerProps, IThemeContain
 
   public render() {
     const { themeName } = this.state;
-    const { zones, children } = this.props;
+    const { children } = this.props;
 
     return (
       <ThemeProvider theme={{ base: themeName }} zones={zones}>
