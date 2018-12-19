@@ -9,8 +9,10 @@ const pkg = require.resolve('package.json', {
 
 module.exports = (baseConfig: any, env: any, config: any) => {
   config.context = cwd;
+  config.mode = 'development';
+  config.resolve.modules = [path.resolve(cwd, 'node_modules'), path.resolve(__dirname, '../node_modules')];
+  config.resolve.alias['@project/stories'] = require.resolve('src/__stories__/index.ts', { paths: [cwd] });
   config.resolve.alias['@project/theme'] = require.resolve('.storybook/theme', { paths: [cwd] });
-  // config.resolve.alias['@project/stories'] = require.resolve('.storybook/stories', { paths: [cwd] });
 
   config.plugins.push(
     new webpack.DefinePlugin({
@@ -21,7 +23,7 @@ module.exports = (baseConfig: any, env: any, config: any) => {
 
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
-    include: [path.resolve(process.cwd(), 'src')],
+    include: [path.resolve(cwd, 'src')],
     use: [
       {
         loader: require.resolve('ts-loader'),

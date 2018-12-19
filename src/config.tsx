@@ -49,7 +49,7 @@ addDecorator(storyFn => <div>{storyFn()}</div>);
 // configure(require('@project/stories'), module);
 
 function loadStories() {
-  require('../../../../src/__stories__');
+  require('@project/stories');
 }
 
 configure(loadStories, module);
