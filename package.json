@@ -40,26 +40,26 @@
     "react-dom": ">=16"
   },
   "dependencies": {
-    "@storybook/addon-actions": "^4.1.2",
-    "@storybook/addon-info": "^4.1.2",
-    "@storybook/addon-knobs": "^4.1.2",
-    "@storybook/addon-links": "^4.1.2",
-    "@storybook/addon-options": "^4.1.2",
-    "@storybook/addons": "^4.1.2",
-    "@storybook/core": "^4.1.2",
-    "@storybook/react": "^4.1.2",
-    "react-docgen-typescript-loader": "^3.0.0",
-    "ts-loader": "^5.3.1"
+    "@storybook/addon-actions": "4.0.x",
+    "@storybook/addon-info": "4.0.x",
+    "@storybook/addon-knobs": "4.0.x",
+    "@storybook/addon-links": "4.0.x",
+    "@storybook/addon-options": "4.0.x",
+    "@storybook/addons": "4.0.x",
+    "@storybook/core": "4.0.x",
+    "@storybook/react": "4.0.x",
+    "react-docgen-typescript-loader": "3.0.x",
+    "ts-loader": "5.3.x"
   },
   "devDependencies": {
     "@stoplight/scripts": "3.x.x",
-    "@types/storybook__addon-actions": "3.4.1",
-    "@types/storybook__addon-info": "3.4.2",
-    "@types/storybook__addon-knobs": "^3.4.1",
-    "@types/storybook__addon-links": "3.3.3",
-    "@types/storybook__addon-options": "4.0.0",
-    "@types/storybook__react": "4.0.0",
-    "typescript": "3.2.2"
+    "@types/storybook__addon-actions": "3.4.x",
+    "@types/storybook__addon-info": "3.4.x",
+    "@types/storybook__addon-knobs": "3.4.x",
+    "@types/storybook__addon-links": "3.3.x",
+    "@types/storybook__addon-options": "4.0.x",
+    "@types/storybook__react": "4.0.x",
+    "typescript": "3.2.x"
   },
   "lint-staged": {
     "*.{ts,tsx}$": [
