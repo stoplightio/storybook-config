@@ -10,9 +10,10 @@ const pkg = require.resolve('package.json', {
 module.exports = (baseConfig: any, env: any, config: any) => {
   config.context = cwd;
   config.mode = 'development';
-  config.resolve.modules = [path.resolve(cwd, 'node_modules'), path.resolve(__dirname, '../node_modules')];
   config.resolve.alias['@project/stories'] = require.resolve('src/__stories__/index.ts', { paths: [cwd] });
-  config.resolve.alias['@project/theme'] = require.resolve('.storybook/theme', { paths: [cwd] });
+  config.resolve.alias['@project/theme'] = require.resolve('.storybook/theme', {
+    paths: [cwd],
+  });
 
   config.plugins.push(
     new webpack.DefinePlugin({
