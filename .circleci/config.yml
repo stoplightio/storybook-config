@@ -29,18 +29,13 @@ jobs:
       - checkout
       - run: yarn
       - run: yarn build
-      - run: yarn build.docs
       - run: yarn release
-      - run: yarn release.docs
 
 workflows:
   version: 2
   test_and_release:
     jobs:
-      - test_node_8
       - release:
           filters:
             branches:
               only: master
-          requires:
-            - test_node_8
