@@ -30,19 +30,6 @@ module.exports = (baseConfig: any, env: any, config: any) => {
         loader: require.resolve('ts-loader'),
         options: {},
       },
-      {
-        loader: require.resolve('react-docgen-typescript-loader'),
-        options: {
-          // without this, react / html base props will be included and there are a LOT of them
-          propFilter: (prop: any) => {
-            if (prop.parent == null) {
-              return true;
-            }
-
-            return prop.parent.fileName.indexOf('node_modules/@types/react') < 0;
-          },
-        },
-      },
     ],
   });
 
