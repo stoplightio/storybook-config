@@ -55,7 +55,6 @@
     "@types/storybook__addon-options": "4.0.x",
     "@types/storybook__react": "4.0.x",
     "babel-loader": "8.x.x",
-    "react-docgen-typescript-loader": "3.0.x",
     "ts-loader": "5.3.x",
     "webpack": "4.x.x"
   },
