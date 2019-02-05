@@ -41,7 +41,6 @@
   "dependencies": {
     "@babel/core": "7.x.x",
     "@storybook/addon-actions": "4.0.x",
-    "@storybook/addon-info": "4.0.x",
     "@storybook/addon-knobs": "4.0.x",
     "@storybook/addon-links": "4.0.x",
     "@storybook/addon-options": "4.0.x",
