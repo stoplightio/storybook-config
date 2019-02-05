@@ -1,6 +1,4 @@
 // @ts-ignore
-import { withInfo } from '@storybook/addon-info';
-// @ts-ignore
 import { withOptions } from '@storybook/addon-options';
 import { addDecorator, configure } from '@storybook/react';
 import * as React from 'react';
@@ -21,24 +19,6 @@ addDecorator(
     hierarchySeparator: /\//,
     hierarchyRootSeparator: /:/,
     selectedAddonPanel: undefined,
-  })
-);
-
-addDecorator(
-  withInfo({
-    header: false,
-    inline: true,
-    source: false, // not that helpful?
-    styles: {
-      infoBody: {
-        backgroundColor: 'white',
-        margin: '50px 0 0 0',
-        padding: '0 25px 25px 25px',
-        lineHeight: '2',
-        width: 800,
-        fontSize: 12,
-      },
-    },
   })
 );
 
