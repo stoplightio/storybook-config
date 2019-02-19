@@ -28,7 +28,9 @@ module.exports = (baseConfig: any, env: any, config: any) => {
     use: [
       {
         loader: require.resolve('ts-loader'),
-        options: {},
+        options: {
+          onlyCompileBundledFiles: true, // https://github.com/TypeStrong/ts-loader#onlycompilebundledfiles-boolean-defaultfalse
+        },
       },
     ],
   });
