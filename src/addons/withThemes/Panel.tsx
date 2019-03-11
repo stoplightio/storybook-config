@@ -1,4 +1,5 @@
-import { Box, Button } from '@stoplight/ui-kit';
+import { Box } from '@stoplight/ui-kit/Box';
+import { Button } from '@stoplight/ui-kit/Button';
 import Channel from '@storybook/channels';
 import * as React from 'react';
 
