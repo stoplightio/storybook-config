@@ -35,33 +35,41 @@
     "test.watch": "yarn test --watch"
   },
   "peerDependencies": {
-    "react": ">=16",
-    "react-dom": ">=16"
+    "react": ">=16.8",
+    "react-dom": ">=16.8"
   },
   "dependencies": {
-    "@babel/core": "7.x.x",
-    "@storybook/addon-actions": "4.0.x",
-    "@storybook/addon-knobs": "4.0.x",
-    "@storybook/addon-links": "4.0.x",
-    "@storybook/addon-options": "4.0.x",
-    "@storybook/addons": "4.0.x",
-    "@storybook/core": "4.0.x",
-    "@storybook/react": "4.0.x",
+    "@babel/core": "7.3.4",
+    "@stoplight/ui-kit": "^1.45.0",
+    "@storybook/addon-actions": "5.0.1",
+    "@storybook/addon-knobs": "5.0.1",
+    "@storybook/addon-links": "5.0.1",
+    "@storybook/addon-options": "5.0.1",
+    "@storybook/addons": "5.0.1",
+    "@storybook/core": "5.0.1",
+    "@storybook/react": "5.0.1",
     "@types/storybook__addon-actions": "3.4.x",
-    "@types/storybook__addon-info": "3.4.x",
-    "@types/storybook__addon-knobs": "3.4.x",
+    "@types/storybook__addon-knobs": "4.0.x",
     "@types/storybook__addon-links": "3.3.x",
     "@types/storybook__addon-options": "4.0.x",
     "@types/storybook__react": "4.0.x",
     "babel-loader": "8.x.x",
     "ts-loader": "5.3.x",
-    "webpack": "4.x.x"
+    "webpack": "4.29.6"
   },
   "devDependencies": {
-    "@stoplight/scripts": "4.x.x",
-    "react": ">=16",
-    "react-dom": ">=16",
-    "typescript": "3.2.x"
+    "@stoplight/scripts": "5.x.x",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "24.3.1",
+    "jest-enzyme": "^7.0.2",
+    "lodash": "4.17.11",
+    "react": "16.8.4",
+    "react-dom": "16.8.4",
+    "ts-jest": "24.0.0",
+    "tslint": "5.13.1",
+    "typescript": "3.3.3333"
   },
   "lint-staged": {
     "*.{ts,tsx}$": [

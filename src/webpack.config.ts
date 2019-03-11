@@ -7,7 +7,7 @@ const pkg = require.resolve('package.json', {
   paths: [process.cwd()],
 }) as any;
 
-module.exports = (baseConfig: any, env: any, config: any) => {
+module.exports = ({ config }: any) => {
   config.context = cwd;
   config.mode = 'development';
   config.resolve.alias['@project/stories'] = require.resolve('src/__stories__/index.ts', { paths: [cwd] });
