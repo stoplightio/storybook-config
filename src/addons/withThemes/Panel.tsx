@@ -51,8 +51,8 @@ export const Panel: React.FunctionComponent<IPanel> = ({ active, channel }) => {
           key={theme}
           onClick={() => channel.emit('themes/setTheme', theme)}
           display="inline-block"
-          px={2}
-          py={3}
+          py={2}
+          px={3}
           fontWeight={700}
           mr={3}
           borderRadius={3}
