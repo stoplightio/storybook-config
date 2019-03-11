@@ -58,7 +58,7 @@ export const Panel: React.FunctionComponent<IPanel> = ({ active, channel }) => {
           borderRadius={3}
           color={theme === themeName ? 'green' : undefined}
           cursor={theme === themeName ? 'default' : 'pointer'}
-          background={theme === themeName ? 'eee' : 'transparent'}
+          backgroundColor={theme === themeName ? 'eee' : 'transparent'}
         >
           {theme}
         </Button>
