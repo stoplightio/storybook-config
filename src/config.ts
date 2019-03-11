@@ -1,7 +1,6 @@
 import { withOptions } from '@storybook/addon-options';
 import { addDecorator, configure } from '@storybook/react';
-import * as React from 'react';
-import { withThemes } from './custom-addons/withThemes';
+import { withThemes } from './addons/withThemes';
 
 addDecorator(
   withOptions({
@@ -19,9 +18,7 @@ addDecorator(
   })
 );
 
-addDecorator(withThemes);
-
-addDecorator(storyFn => <div>{storyFn()}</div>);
+addDecorator(withThemes(require('@project/theme')));
 
 configure(require('@project/stories'), module);
 
