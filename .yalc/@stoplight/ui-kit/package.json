@@ -1,0 +1,46 @@
+{
+  "name": "@stoplight/ui-kit",
+  "version": "0.0.0-6dc1c9c6",
+  "description": "Foundational React components for the Stoplight ecosystem.",
+  "keywords": [
+    "react",
+    "ui",
+    "ui-components"
+  ],
+  "main": "index.js",
+  "sideEffects": false,
+  "files": [
+    "**/*"
+  ],
+  "author": "Stoplight <support@stoplight.io>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stoplightio/ui-kit.git"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=8.3.0"
+  },
+  "peerDependencies": {
+    "prismjs": ">=1.16",
+    "react": ">=16.8",
+    "react-dom": ">=16.8"
+  },
+  "dependencies": {
+    "@blueprintjs/core": "^3.15.0",
+    "@blueprintjs/icons": "^3.7.0",
+    "@blueprintjs/select": "^3.8.0",
+    "@fortawesome/fontawesome-svg-core": "1.2.17",
+    "@fortawesome/react-fontawesome": "0.1.4",
+    "@stoplight/types": "4.1.x",
+    "classnames": "^2.2.6",
+    "react-custom-scrollbars": "4.2.x",
+    "react-simple-code-editor": "0.9.9",
+    "react-window": "1.7.1",
+    "refractor": "2.8.0",
+    "use-immer": "^0.1.0",
+    "use-resize-observer": "3.1.0",
+    "yup": "^0.27.0"
+  },
+  "typings": "index.d.ts"
+}

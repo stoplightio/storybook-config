@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "@stoplight/ui-kit": {
+      "signature": "6dc1c9c6babde9ccc9d604ac88d60189",
+      "file": true,
+      "replaced": "^1.46.1"
+    }
+  }
+}
