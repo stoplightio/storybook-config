@@ -11,9 +11,6 @@ module.exports = ({ config }: any) => {
   config.context = cwd;
   config.mode = 'development';
   config.resolve.alias['@project/stories'] = require.resolve('src/__stories__/index.ts', { paths: [cwd] });
-  config.resolve.alias['@project/theme'] = require.resolve('.storybook/theme', {
-    paths: [cwd],
-  });
 
   config.plugins.push(
     new webpack.DefinePlugin({
