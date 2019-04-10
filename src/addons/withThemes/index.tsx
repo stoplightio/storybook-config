@@ -8,6 +8,11 @@ interface IThemeContainer {
   themes: string[];
 }
 
+const darkTheme = {
+  backgroundColor: '#111',
+  color: '#fff',
+};
+
 export const withThemes = ({ ThemeProvider, themes, zones }: any) =>
   makeDecorator({
     name: 'withThemes',
@@ -39,7 +44,11 @@ const ThemeContainer: React.FunctionComponent<IThemeContainer> = ({ channel, the
     [channel, setThemeName]
   );
 
-  return React.cloneElement(children, {
-    theme: { base: themeName },
-  });
+  return (
+    <div style={{ ...(themeName === 'dark' ? darkTheme : null), minHeight: '100vh', padding: '5px 10px' }}>
+      {React.cloneElement(children, {
+        theme: { base: themeName },
+      })}
+    </div>
+  );
 };
