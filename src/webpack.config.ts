@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const PackageImporter = require('node-sass-package-importer');
 
 const cwd = process.cwd();
 
@@ -86,6 +87,7 @@ module.exports = ({ config }: any) => {
         options: {
           sourceMap: true,
           plugins: [
+            require('postcss-import'),
             require('autoprefixer')({
               env: 'last 2 Chrome versions, last 2 Firefox versions, last 1 Safari version',
             }),
@@ -96,7 +98,7 @@ module.exports = ({ config }: any) => {
         loader: require.resolve('sass-loader'),
         options: {
           sourceMap: true,
-          includePaths: [path.resolve(cwd, 'node_modules')],
+          importer: [PackageImporter()],
         },
       },
     ],
