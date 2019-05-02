@@ -57,8 +57,8 @@ module.exports = ({ config }: any) => {
           plugins: [
             require('autoprefixer')({
               env: 'last 2 Chrome versions, last 2 Firefox versions, last 1 Safari version',
-            })
-          ]
+            }),
+          ],
         },
       },
     ],
@@ -88,8 +88,8 @@ module.exports = ({ config }: any) => {
           plugins: [
             require('autoprefixer')({
               env: 'last 2 Chrome versions, last 2 Firefox versions, last 1 Safari version',
-            })
-          ]
+            }),
+          ],
         },
       },
       {
