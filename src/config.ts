@@ -1,6 +1,5 @@
 import { withOptions } from '@storybook/addon-options';
 import { addDecorator, configure } from '@storybook/react';
-import { withThemes } from './addons/withThemes';
 
 addDecorator(
   withOptions({
@@ -15,10 +14,6 @@ addDecorator(
     selectedAddonPanel: undefined,
   })
 );
-
-addDecorator(withThemes(require('@project/theme')));
-
-configure(require('@project/stories'), module);
 
 function loadStories() {
   require('@project/stories');
