@@ -55,7 +55,13 @@
     "@types/storybook__addon-links": "3.3.x",
     "@types/storybook__addon-options": "4.0.x",
     "@types/storybook__react": "4.0.x",
+    "autoprefixer": "^9.5.1",
     "babel-loader": "8.x.x",
+    "css-loader": "^2.1.1",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "ts-loader": "5.4.5",
     "webpack": "4.30.0"
   },
