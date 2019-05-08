@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const PackageImporter = require('node-sass-package-importer');
+const inliner = require('sass-inline-svg');
 
 const cwd = process.cwd();
 
@@ -94,11 +95,20 @@ module.exports = ({ config }: any) => {
           ],
         },
       },
+      'resolve-url-loader',
       {
         loader: require.resolve('sass-loader'),
         options: {
           sourceMap: true,
           importer: [PackageImporter()],
+          functions: {
+            'svg-icon': inliner(path.resolve('node_modules', '@stoplight', 'ui-kit', 'styles', 'icons'), {
+              // run through SVGO first
+              optimize: true,
+              // minimal "uri" encoding is smaller than base64
+              encodingFormat: 'uri',
+            }),
+          },
         },
       },
     ],
