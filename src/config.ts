@@ -1,19 +1,27 @@
-import { withOptions } from '@storybook/addon-options';
-import { addDecorator, configure } from '@storybook/react';
+import { addParameters, configure } from '@storybook/react';
+import { create } from '@storybook/theming';
 
-addDecorator(
-  withOptions({
-    name: pkg.name || 'Stoplight UI-Kit',
-    url: pkg.url || 'https://github.com/stoplightio/ui-kit',
-    goFullScreen: false,
-    showStoriesPanel: true,
-    showAddonPanel: true,
+// This is kinda fragile as it makes the assumptions that it is installed in
+// the top-level node_modules of the root project.
+const pkg = require('../../../package.json');
+
+addParameters({
+  options: {
+    isFullScreen: false,
+    showNav: true,
+    showPanel: true,
     showSearchBox: false,
-    addonPanelInRight: true,
+    panelPosition: 'right',
     sortStoriesByKind: true,
     selectedAddonPanel: undefined,
-  })
-);
+    theme: create({
+      base: 'light',
+
+      brandTitle: pkg.name,
+      brandUrl: pkg.repository.url,
+    }),
+  },
+});
 
 function loadStories() {
   require('@project/stories');
