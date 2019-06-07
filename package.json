@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "description": "Shared storybook config for UI-Kit based project",
   "keywords": [],
-  "sideEffects": false,
   "homepage": "https://github.com/stoplightio/storybook-config",
   "bugs": "https://github.com/stoplightio/storybook-config/issues",
   "author": "Stoplight <support@stoplight.io>",
