@@ -33,6 +33,9 @@
     "test.update": "yarn test --updateSnapshot",
     "test.watch": "yarn test --watch"
   },
+  "resolutions": {
+    "lodash": "^4.17.15"
+  },
   "peerDependencies": {
     "react": ">=16.8",
     "react-dom": ">=16.8"
@@ -76,7 +79,7 @@
     "husky": "^2.2.0",
     "jest": "24.7.1",
     "jest-enzyme": "^7.0.2",
-    "lodash": "4.17.11",
+    "lodash": "^4.17.15",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "ts-jest": "24.0.2",
