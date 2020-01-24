@@ -16,7 +16,7 @@
     "**/*"
   ],
   "engines": {
-    "node": ">=8.3.0"
+    "node": ">=10"
   },
   "scripts": {
     "build": "sl-scripts build",
