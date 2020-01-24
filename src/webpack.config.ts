@@ -5,14 +5,14 @@ const inliner = require('sass-inline-svg');
 
 const cwd = process.cwd();
 
-const pkg = require.resolve('package.json', {
+const pkg = require.resolve(path.join(cwd, 'package.json'), {
   paths: [process.cwd()],
 }) as any;
 
 module.exports = ({ config }: any) => {
   config.context = cwd;
   config.mode = 'development';
-  config.resolve.alias['@project/stories'] = require.resolve('src/__stories__/index.ts', { paths: [cwd] });
+  config.resolve.alias['@project/stories'] = require.resolve(path.join(cwd, 'src', '__stories__', 'index.ts'), { paths: [cwd] });
 
   config.plugins.push(
     new webpack.DefinePlugin({
@@ -41,21 +41,16 @@ module.exports = ({ config }: any) => {
     use: [
       {
         loader: require.resolve('style-loader'),
-        options: {
-          sourceMap: true,
-        },
       },
       {
         loader: require.resolve('css-loader'),
         options: {
-          sourceMap: true,
           importLoaders: 1,
         },
       },
       {
         loader: require.resolve('postcss-loader'),
         options: {
-          sourceMap: true,
           plugins: [
             require('autoprefixer')({
               env: 'last 2 Chrome versions, last 2 Firefox versions, last 1 Safari version',
@@ -72,21 +67,16 @@ module.exports = ({ config }: any) => {
     use: [
       {
         loader: require.resolve('style-loader'),
-        options: {
-          sourceMap: true,
-        },
       },
       {
         loader: require.resolve('css-loader'),
         options: {
-          sourceMap: true,
           importLoaders: 2,
         },
       },
       {
         loader: require.resolve('postcss-loader'),
         options: {
-          sourceMap: true,
           plugins: [
             require('postcss-import'),
             require('autoprefixer')({
@@ -99,16 +89,17 @@ module.exports = ({ config }: any) => {
       {
         loader: require.resolve('sass-loader'),
         options: {
-          sourceMap: true,
-          importer: [PackageImporter()],
-          functions: {
-            'svg-icon': inliner(path.resolve('node_modules', '@stoplight', 'ui-kit', 'styles', 'icons'), {
-              // run through SVGO first
-              optimize: true,
-              // minimal "uri" encoding is smaller than base64
-              encodingFormat: 'uri',
-            }),
-          },
+          sassOptions: {
+            importer: [PackageImporter()],
+            functions: {
+              'svg-icon': inliner(path.resolve('node_modules', '@stoplight', 'ui-kit', 'styles', 'icons'), {
+                // run through SVGO first
+                optimize: true,
+                // minimal "uri" encoding is smaller than base64
+                encodingFormat: 'uri',
+              }),
+            },
+          }
         },
       },
     ],
