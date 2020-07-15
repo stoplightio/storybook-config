@@ -61,6 +61,21 @@ module.exports = ({ config }: any) => {
     ],
   });
 
+  let svgIconFunc: () => unknown;
+  try{
+    const uiKitPath = require.resolve('@stoplight/ui-kit');
+    svgIconFunc = inliner(path.dirname(uiKitPath)+'/styles/icons', {
+      // run through SVGO first
+      optimize: true,
+      // minimal "uri" encoding is smaller than base64
+      encodingFormat: 'uri',
+    });
+  } catch (e) {
+    svgIconFunc = () => {
+      throw e;
+    };
+  }
+
   config.module.rules.push({
     test: /\.scss$/,
     include: [path.resolve(cwd, 'src')],
@@ -92,12 +107,7 @@ module.exports = ({ config }: any) => {
           sassOptions: {
             importer: [PackageImporter()],
             functions: {
-              'svg-icon': inliner(path.resolve('node_modules', '@stoplight', 'ui-kit', 'styles', 'icons'), {
-                // run through SVGO first
-                optimize: true,
-                // minimal "uri" encoding is smaller than base64
-                encodingFormat: 'uri',
-              }),
+              'svg-icon': svgIconFunc,
             },
           }
         },
