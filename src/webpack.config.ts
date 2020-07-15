@@ -92,7 +92,7 @@ module.exports = ({ config }: any) => {
           sassOptions: {
             importer: [PackageImporter()],
             functions: {
-              'svg-icon': inliner(path.resolve('node_modules', '@stoplight', 'ui-kit', 'styles', 'icons'), {
+              'svg-icon': inliner(path.dirname(require.resolve('@stoplight/ui-kit'))+'/styles/icons', {
                 // run through SVGO first
                 optimize: true,
                 // minimal "uri" encoding is smaller than base64
