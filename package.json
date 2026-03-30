@@ -112,12 +112,13 @@
     "lodash":"4.17.23",
     "loader-utils":" 3.3.1",
     "eventsource":"1.1.1",
-    "handlebars":"4.7.8",
+    "handlebars":"4.7.9",
     "merge-deep":"3.0.3",
     "url-parse": "1.5.10",
     "@babel/traverse":"7.29.0",
     "ejs":"4.0.1",
-    "elliptic":"6.6.1"
+    "elliptic":"6.6.1",
+    "simple-git":"3.32.3"
   }
    
 }
