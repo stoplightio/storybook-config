@@ -117,11 +117,9 @@
     "@babel/traverse":"7.29.0",
     "ejs":"4.0.1",
     "elliptic":"6.6.1",
-  
     "semver": "6.3.1",
     "lodash.template": "4.18.0",
-  
-    "minimatch": "3.1.4", 
+    "minimatch": "3.1.4",
     "ansi-regex": "4.1.1",
     "ip": "1.1.9",
     "postcss": "8.5.10",
@@ -194,13 +192,12 @@
     "merge": "2.1.1",
     "semantic-release": "19.0.3",
     "node-notifier": "8.0.1",
-    "@tootallnate/once": "3.0.1" ,
+    "@tootallnate/once": "3.0.1",
     "@octokit/plugin-paginate-rest": "9.2.2",
     "npm": "6.14.6",
     "qs": "6.15.2",
     "tmp": "0.2.6",
-    "axios": "0.32.0",
+    "axios": "1.16.1",
     "normalize-url": "4.5.1"
   }
-   
 }
