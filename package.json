@@ -1,6 +1,6 @@
 {
   "name": "@stoplight/storybook-config",
-  "version": "0.0.0",
+  "version": "2.0.8-beta-0.2",
   "description": "Shared storybook config for UI-Kit based project",
   "keywords": [],
   "homepage": "https://github.com/stoplightio/storybook-config",
@@ -16,7 +16,7 @@
     "**/*"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=18"
   },
   "scripts": {
     "build": "sl-scripts build",
