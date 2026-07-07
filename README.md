@@ -6,6 +6,11 @@ A shared storybook config for [UI-Kit](https://github.com/stoplightio/ui-kit) ba
 
 - Explore the components: [Storybook](https://stoplightio.github.io/storybook-config)
 - View the changelog: [Releases](https://github.com/stoplightio/storybook-config/releases)
+- Resolved build-related issues and improved package stability.
+- Upgraded dependencies for full compatibility with **Node.js 24**.
+- Remediated critical security vulnerabilities by updating affected packages.
+- Enhanced overall security, reliability, and maintainability of the package.
+
 
 ### Features
 
