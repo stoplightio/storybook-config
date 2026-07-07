@@ -203,6 +203,7 @@
     "qs": "6.15.2",
     "tmp": "0.2.6",
     "axios": "1.16.1",
-    "normalize-url": "4.5.1"
+    "normalize-url": "4.5.1",
+    "undici": "8.5.0"
   }
 }
