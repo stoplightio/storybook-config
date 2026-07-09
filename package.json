@@ -1,6 +1,6 @@
 {
   "name": "@stoplight/storybook-config",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "description": "Shared storybook config for UI-Kit based project",
   "keywords": [],
   "homepage": "https://github.com/stoplightio/storybook-config",
