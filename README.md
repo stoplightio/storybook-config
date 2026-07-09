@@ -10,6 +10,7 @@ A shared storybook config for [UI-Kit](https://github.com/stoplightio/ui-kit) ba
 - Upgraded dependencies for full compatibility with **Node.js 24**.
 - Remediated critical security vulnerabilities by updating affected packages.
 - Enhanced overall security, reliability, and maintainability of the package.
+- Remediated major and normal security vulnerabilities by updating affected packages.
 
 
 ### Features
