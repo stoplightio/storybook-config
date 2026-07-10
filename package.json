@@ -21,7 +21,7 @@
   "scripts": {
     "build": "sl-scripts build",
     "commit": "git-cz",
-    "postinstall": "node scripts/patch-storybook-dev-server.js",
+    "postinstall": "node scripts/patch-storybook-dev-server.js && node scripts/patch-highlightjs-language-aliases.js",
     "release": "sl-scripts release",
     "release.dryRun": "sl-scripts release --dry-run --debug",
     "storybook": "start-storybook -p 9001 -c .storybook",
@@ -104,7 +104,7 @@
   "resolutions": {
     "fsevents": "2.3.3",
     "shell-quote": "1.8.4",
-    "form-data": "4.0.5",
+    "form-data": "4.0.6",
     "pbkdf2": "3.1.5",
     "json-schema": "0.4.0",
     "minimist": "1.2.8",
@@ -160,7 +160,7 @@
     "brace-expansion": "1.1.13",
     "browserslist": "4.16.5",
     "@babel/helpers": "7.26.10",
-    "serialize-javascript": "6.0.1",
+    "serialize-javascript": "7.0.7",
     "@babel/runtime": "7.26.10",
     "browserify-sign": "4.2.2",
     "word-wrap": "1.2.4",
@@ -186,6 +186,7 @@
     "ua-parser-js": "0.7.24",
     "shelljs": "0.8.5",
     "hosted-git-info": "2.8.9",
+    "highlight.js": "10.4.1",
     "npm-registry-fetch": "4.0.5",
     "npm-user-validate": "1.0.1",
     "object-path": "0.11.8",
@@ -201,9 +202,10 @@
     "@octokit/plugin-paginate-rest": "9.2.2",
     "npm": "6.14.6",
     "qs": "6.15.2",
-    "tmp": "0.2.6",
+    "tmp": "0.2.7",
     "axios": "1.16.1",
     "normalize-url": "4.5.1",
-    "undici": "8.5.0"
+    "undici": "8.5.0",
+    "uuid": "14.0.1"
   }
 }
